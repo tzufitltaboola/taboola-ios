@@ -10,7 +10,7 @@ import UIKit
 import TaboolaSDK
 
 class TaboolaCell: UITableViewCell {
-    
+
     @IBOutlet weak var taboolaView: TaboolaView!
 
 }
@@ -61,7 +61,7 @@ class TBTableViewController: UITableViewController {
             taboolaCell.taboolaView.pageUrl = "http://www.example.com";
             taboolaCell.taboolaView.placement = "feed-sample-app";
             taboolaCell.taboolaView.targetType = "mix";
-//            taboolaCell.taboolaView.setInterceptScroll(true)
+            taboolaCell.taboolaView.setInterceptScroll(true)
             taboolaCell.taboolaView.fetchContent()
             return taboolaCell
         default:
