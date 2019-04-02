@@ -13,7 +13,8 @@
 - (BOOL)onItemClick:(NSString *)placementName withItemId:(NSString *)itemId withClickUrl:(NSString *)clickUrl isOrganic:(BOOL)organic;
 - (void)webView:(UIView*) webView didLoadPlacementNamed:(NSString *) placementName withHeight:(CGFloat)height;
 - (void)webView:(UIView*) webView didFailToLoadPlacementNamed:(NSString *) placementName withErrorMessage:(NSString *) error;
-- (void)webView:(UIView*) webView didScrollToTop:(BOOL)top;
+- (void)scrollViewDidScrollToTopWebView:(UIView*) webView;
+- (void)clickedOnAction:(NSNumber*)actionType data:(NSDictionary*)data;
 @end
 
 @interface TaboolaJS : NSObject
@@ -35,6 +36,10 @@
  */
 - (void)registerWebView:(UIView*)webview withDelegate:(id<TaboolaJSDelegate>)delegate;
 - (void)registerWebView:(UIView*) webView;
+
+-(void)fetchContent:(UIView*)webview;
+
+-(void)showProgressBar:(UIView*)webview;
 
 /**
  Unregisters an already registered webView from Taboola JS SDK. It is required to reload/load the page after unregistering the webview
@@ -75,5 +80,7 @@
  Get all active extra properties
  */
 - (NSDictionary *)extraProperties;
+
+- (void)didMoveToSuperview:(UIView*_Nullable) webView;
 
 @end

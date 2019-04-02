@@ -7,7 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+@interface TBImageView : UIImageView 
 
-@interface TBImageView : UIImageView
 
 @end
+

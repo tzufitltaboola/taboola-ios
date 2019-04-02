@@ -1,4 +1,4 @@
-CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/TaboolaSDK-iOS10.2
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/TaboolaSDK-iOS9.0
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/TaboolaSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 OTHER_LDFLAGS = $(inherited) -framework "AdSupport" -framework "CoreLocation" -framework "Foundation" -framework "SafariServices" -framework "TaboolaSDK" -framework "UIKit" -framework "WebKit"

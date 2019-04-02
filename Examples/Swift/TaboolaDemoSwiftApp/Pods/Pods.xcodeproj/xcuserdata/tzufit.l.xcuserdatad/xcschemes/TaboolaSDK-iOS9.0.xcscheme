@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "615724662B4E11F2BE06F7991F84437A"
-               BlueprintName = "TaboolaSDK-iOS10.2"
+               BlueprintIdentifier = "7F247CFBCB041DA1ADF9A58F00A8B5D6"
+               BlueprintName = "TaboolaSDK-iOS9.0"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "TaboolaSDK-iOS10.2">
+               BuildableName = "TaboolaSDK-iOS9.0">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

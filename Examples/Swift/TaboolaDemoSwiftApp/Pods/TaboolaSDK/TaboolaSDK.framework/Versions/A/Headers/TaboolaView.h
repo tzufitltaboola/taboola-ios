@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, LogLevel) {
     LogLevelError   = 3
 };
 
+
 /**
  This protocol should be implemented by the host app. TaboolaView sends various lifecycle events to the delegate, to allow more flexibility for the host app.
  */
@@ -70,7 +71,15 @@ typedef NS_ENUM(NSInteger, LogLevel) {
  */
 - (void)taboolaViewResizeHandler __deprecated_msg("Method is deprecated. Use 'taboolaViewResizedToHeight' instead");
 
+/**
+ Triggered when the taboolaView is scrolled to top.
+ */
+- (void)scrollViewDidScrollToTopTaboolaView:(UIView*)taboolaView;
 
+/**
+ Triggered when clicked save For Later.
+ */
+- (void)clickedOnAction:(NSNumber*)actionType data:(NSDictionary*)data;
 @end
 
 /**
@@ -120,6 +129,8 @@ typedef NS_ENUM(NSInteger, LogLevel) {
  */
 @property(nonatomic, strong) NSString *pageId;
 
+@property(nonatomic, strong) NSString *progressBarColor;
+
 /**
  Optional. Attaches a TaboolaViewDelegate to the TaboolaView. Allows intercepting clicks.
  */
@@ -167,11 +178,15 @@ typedef NS_ENUM(NSInteger, LogLevel) {
  */
 @property (nonatomic) NSString* mediation;
 
-
 /**
  Optional. Change the time out of loading widget in sec. The default is 10s.
  */
 @property (nonatomic) int timeOutOfLoading;
+
+/**
+ Optional. use to override scrollIntercept.
+ */
+@property(nonatomic, readwrite) BOOL overrideScrollIntercept;
 
 + (CGFloat) widgetHeight;
 
@@ -196,6 +211,8 @@ typedef NS_ENUM(NSInteger, LogLevel) {
  In feed, set scrollIntercept to Yes (defult NO);
  */
 -(void)setInterceptScroll:(BOOL)scrollIntercept;
+
+-(void)setProgressBarEnabled:(BOOL)progressBarEnabled;
 
 /**
  Resets the TaboolaView - All conents and pushed commands are cleared. new commands must be pushed before fetching data again.

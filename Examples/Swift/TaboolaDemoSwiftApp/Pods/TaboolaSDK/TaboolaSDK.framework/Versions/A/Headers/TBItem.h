@@ -14,7 +14,15 @@
 
 @class TBItemModel;
 
+@protocol TBPlacementDelegate <NSObject>
+-(void)notifyVisibleEvent;
+-(void)notifyAvailableEvent;
+@end
+
+
 @interface TBItem : NSObject
+
+@property (nonatomic, weak) id<TBPlacementDelegate> placementDelegate;
 
 - (instancetype)initWithItemModel:(TBItemModel *)model;
 
@@ -35,5 +43,6 @@
 
 -(void)handleClickEvent;
 -(void)notifyVisibleEvent;
+-(void)notifyAvailableEvent;
 
 @end

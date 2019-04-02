@@ -40,4 +40,6 @@ typedef void(^TBRecommendationRequestFailureCallback)(NSError *error);
 
 - (void)handleAttributionClick;
 - (void)setExtraPropetries:(NSDictionary *)properties;
+
+- (void)clear;
 @end
