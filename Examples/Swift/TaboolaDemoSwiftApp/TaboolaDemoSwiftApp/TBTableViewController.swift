@@ -42,7 +42,7 @@ class TBTableViewController: UITableViewController {
 
         switch indexPath.row {
         case 1:
-            return 2500
+            return TaboolaView.widgetHeight()
         default:
             return UITableViewAutomaticDimension
         }
